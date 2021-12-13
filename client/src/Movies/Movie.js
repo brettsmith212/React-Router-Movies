@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useHistory, useParams, useRouteMatch } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function Movie(props) {
   const [movie, setMovie] = useState();
-  const history = useHistory();
 
   const { movieID } = useParams();
-  const { url, path } = useRouteMatch();
 
   let id = movieID;
   // Change ^^^ that line and use a hook to obtain the :id parameter from the URL

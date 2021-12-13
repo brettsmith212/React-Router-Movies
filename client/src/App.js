@@ -40,13 +40,11 @@ export default function App() {
         }
       />
 
-      <Link to="/movies-list">Movies List</Link>
-
       <Switch>
-        <Route path="/movies-list/:movieID">
+        <Route path="/movies/:movieID">
           <Movie />
         </Route>
-        <Route path="/movies-list">
+        <Route path="/">
           <MovieList movies={movieList} />
         </Route>
       </Switch>
