@@ -39,14 +39,15 @@ export default function App() {
           ]
         }
       />
-      <Link to="/movie-list">Movie List</Link>
+
+      <Link to="/movies-list">Movies List</Link>
 
       <Switch>
-        <Route path="/movie-list">
-          <MovieList movies={movieList} />
-        </Route>
-        <Route path="/movies/:movieID">
+        <Route path="/movies-list/:movieID">
           <Movie />
+        </Route>
+        <Route path="/movies-list">
+          <MovieList movies={movieList} />
         </Route>
       </Switch>
     </div>
